@@ -1,11 +1,16 @@
 package com.lms.cleartrip.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book {
 
 	private String id;
 	private String title;
 	private String author; 
 	private Integer count;
+	//list of users with this book
+	private List<String> userIds = new ArrayList<>();
 	
 	public Book() {
 		super();
@@ -49,6 +54,14 @@ public class Book {
 
 	public void setCount(Integer count) {
 		this.count = count;
+	}
+
+	public List<String> getUserIds() {
+		return userIds;
+	}
+
+	public void setUserIds(List<String> userIds) {
+		this.userIds = userIds;
 	}
 
 }

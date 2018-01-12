@@ -62,6 +62,12 @@ public class Database {
 		if(!users.containsKey(userId)){
 			throw new RuntimeException("user not found with id : " + userId);
 		}
+		Book book = books.get(bookId);
+		if(book.getCount()==0){
+			throw new RuntimeException("book not avialble");
+		}
+		book.setCount(book.getCount()-1);
+		book.getUserIds().add(userId);
 		return true;
 	}
 

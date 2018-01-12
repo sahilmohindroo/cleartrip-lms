@@ -30,6 +30,7 @@ public class AppMain {
 		createBook("b2", "title2", "author1", 4);
 		createBook("b3", "title3", "author2", 1);
 		
+		lendBook("b1", "u1");
 		context.close();
 
 	}
